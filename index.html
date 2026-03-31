@@ -4,19 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
+    <title>Weather Dashboard</title>
     <link rel="stylesheet" href="index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <main>
-      <div class="row" style="text-align: center">
-        <form action="">
-          <input type="search" id="search" placeholder="Search by city name" />
-        </form>
-      </div>
-      <div class="row" id="weather"></div>
-    </main>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">Weather Dashboard</h1>
+        <p class="subtitle">Get real-time weather information for any city</p>
+      </header>
+      
+      <main>
+        <div class="search-section">
+          <form id="search-form" class="search-form">
+            <div class="search-container">
+              <input 
+                type="search" 
+                id="search" 
+                placeholder="Search by city name..." 
+                class="search-input"
+                autocomplete="off"
+              />
+              <button type="submit" class="search-button">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+        
+        <div class="weather-section" id="weather">
+          <div class="weather-placeholder">
+            <div class="placeholder-icon">🌤️</div>
+            <p>Enter a city name to see the weather</p>
+          </div>
+        </div>
+      </main>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
